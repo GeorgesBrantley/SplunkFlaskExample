@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Phone Ripper</title>
+<style>
+ 
+body{
+    text-align: center;    
+}
+h1{
+    font-family: 'Times New Roman';
+    font-weight: normal;
+    color: #83A4B3;
+    font-size: 2.5em;
+    text-align: center;
+}
+h2{
+    text-align:center;
+}
+h3{
+    text-align:center;
+}
+ 
+</style>
+ 
+</head>
+<body>
+    <h2>SPLUNK PHONE RIPPER PROTOTYPE</h2> 
+    <h1>Kinney Group</h1>
+    <h3>Parse Index {{indexChosen}}</h3>
+
+    <form action='/indexMenu/result' method="POST">
+        <input type="radio" name="choice" value="TopCallsAll">Top Calls All<br>
+        <input type="radio" name="choice" value="TopCallsOut">Top Calls Out<br>
+        <input type="radio" name="choice" value="TopCallsIn">Top Calls In<br>
+        <input type="hidden" name="index" value={{indexChosen}}>
+        <input type="submit" name="submit" value="Parse">
+    </form>
+<ul>
+  <a href="/">Main Menu</a>
+</ul>
+</body>
+</html>
